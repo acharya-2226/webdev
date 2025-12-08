@@ -1,0 +1,214 @@
+/* -------------------- UNIVERSAL SELECTOR -------------------- */
+* {
+    box-sizing: border-box;
+}
+
+/* -------------------- BODY -------------------- */
+body {
+    background-color: #f5f5dc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------- CUSTOM HEADER STYLING -------------------- */
+.custom-header {
+    background: linear-gradient(135deg, #350c5c 0%, #bb7fef 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-circle {
+    background-color: white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9943ea;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.logo-circle:hover {
+    transform: rotate(360deg);
+}
+
+.brand-text {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+/* -------------------- NAVIGATION STYLING -------------------- */
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* -------------------- MAIN CONTENT -------------------- */
+main {
+    flex: 1;
+}
+
+.content-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------- FORM STYLING -------------------- */
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control:focus {
+    border-color: #9943ea;
+    box-shadow: 0 0 0 0.2rem rgba(153, 67, 234, 0.25);
+}
+
+.btn-custom {
+    background: linear-gradient(135deg, #9943ea 0%, #bb7fef 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(153, 67, 234, 0.4);
+    color: white;
+}
+
+/* -------------------- TABLE STYLING -------------------- */
+.table-custom {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-custom thead {
+    background: linear-gradient(135deg, #9943ea 0%, #bb7fef 100%);
+    color: white;
+}
+
+/* -------------------- BOX MODEL DEMO -------------------- */
+.box-demo {
+    border: 3px dashed #9943ea;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(153, 67, 234, 0.1) 0%, rgba(187, 127, 239, 0.1) 100%);
+    position: relative;
+}
+
+.box-demo::before {
+    content: 'Margin';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: #f5f5dc;
+    padding: 0 10px;
+    color: #9943ea;
+    font-weight: bold;
+}
+
+/* -------------------- FOOTER -------------------- */
+.custom-footer {
+    background: linear-gradient(135deg, #9943ea 0%, #bb7fef 100%);
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+/* -------------------- DESCRIPTION LIST STYLING -------------------- */
+.dl-custom dt {
+    font-weight: bold;
+    color: #9943ea;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.dl-custom dd {
+    display: inline;
+    margin-left: 1rem;
+}
+
+.dl-custom dd::after {
+    content: "\A";
+    white-space: pre;
+}
+
+/* -------------------- ORDERED LIST STYLING -------------------- */
+.ol-custom {
+    list-style-type: lower-roman;
+    font-size: 1.1rem;
+}
+
+.ol-custom li {
+    padding: 0.3rem 0;
+}
+
+/* -------------------- ANIMATIONS -------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* -------------------- RESPONSIVE ADJUSTMENTS -------------------- */
+@media (max-width: 768px) {
+    .brand-text {
+        font-size: 1.2rem;
+    }
+    
+    .logo-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+}

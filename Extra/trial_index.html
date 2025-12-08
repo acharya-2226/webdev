@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Portfolio Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="trial_styles.css">
+</head>
+
+<body>
+    <!-- Header with Bootstrap Navbar -->
+    <header class="custom-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="logo-circle">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <span class="brand-text">My Website</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="bi bi-house-door"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-person"></i> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-briefcase"></i> Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-envelope"></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid px-4 py-4">
+        <div class="row g-4">
+            <!-- Form Section -->
+            <div class="col-lg-6">
+                <div class="content-card p-4 animate-in">
+                    <h2 class="mb-4 text-center">
+                        <i class="bi bi-pencil-square text-primary"></i> Enter Details
+                    </h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control form-control-lg" id="password" placeholder="********" required>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-custom btn-lg">
+                                <i class="bi bi-check-circle"></i> Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Lists and Table Section -->
+            <div class="col-lg-6">
+                <div class="content-card p-4 animate-in" style="animation-delay: 0.2s;">
+                    <div class="row g-4">
+                        <!-- Ordered List -->
+                        <div class="col-md-6">
+                            <h3 class="mb-3"><i class="bi bi-list-ol text-primary"></i> Ordered List</h3>
+                            <ol class="ol-custom">
+                                <li>Content 1</li>
+                                <li>Content 2</li>
+                                <li>Content 3</li>
+                                <li>Content 4</li>
+                            </ol>
+                        </div>
+
+                        <!-- Description List -->
+                        <div class="col-md-6">
+                            <h3 class="mb-3"><i class="bi bi-person-badge text-primary"></i> Description List</h3>
+                            <dl class="dl-custom">
+                                <dt>Name:</dt>
+                                <dd>Siddharth Acharya</dd>
+                                <dt>Post:</dt>
+                                <dd>Full Stack Web Developer</dd>
+                            </dl>
+                        </div>
+
+                        <!-- Table -->
+                        <div class="col-12 mt-4">
+                            <h3 class="mb-3"><i class="bi bi-table text-primary"></i> Data Table</h3>
+                            <div class="table-responsive">
+                                <table class="table table-custom table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Header 1</th>
+                                            <th>Header 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Row 1, Cell 1</td>
+                                            <td>Row 1, Cell 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Row 2, Cell 1</td>
+                                            <td>Row 2, Cell 2</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="table-light">
+                                        <tr>
+                                            <td>Footer 1</td>
+                                            <td>Footer 2</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box Model Demo -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="content-card p-4 animate-in" style="animation-delay: 0.4s;">
+                    <h2 class="text-center mb-4">
+                        <i class="bi bi-box text-primary"></i> CSS Box Model Demo
+                    </h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="box-demo">
+                                <div class="border border-3 border-primary p-4 bg-white rounded">
+                                    <div class="bg-light p-3 text-center">
+                                        <strong>Content Area</strong>
+                                        <p class="mb-0 mt-2">This demonstrates the CSS box model with margin, border, padding, and content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="custom-footer text-center">
+        <div class="container">
+            <h4 class="mb-2">
+                <i class="bi bi-c-circle"></i> HCOE - 2024
+            </h4>
+            <p class="mb-0">Built with Bootstrap & Modern CSS</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
