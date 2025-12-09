@@ -284,6 +284,22 @@ table {
     /* Rounded corners */
 }
 
+.box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+
+img, video {
+  border: 2px solid black;
+  width: 50%;
+  height: 50%;
+}
+
+
+
 /* 
 table { 
 border-collapse: collapse; 
