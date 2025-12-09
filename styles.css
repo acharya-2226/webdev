@@ -284,18 +284,22 @@ table {
     /* Rounded corners */
 }
 
-.box {
+.multimedia {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
-  gap: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
 }
 
 img, video {
   border: 2px solid black;
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
 }
 
 
